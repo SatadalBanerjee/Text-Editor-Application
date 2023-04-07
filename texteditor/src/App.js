@@ -4,9 +4,16 @@ import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-// import About from './components/About';
+import About from './components/About';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
+
+function App() { 
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
 
@@ -24,6 +31,7 @@ function App() {
 
     if(mode=== "light"){
       setMode("dark");
+      document.title = "Text Editor- Dark Mode"
       document.body.style.backgroundColor ="#042743";
       displayAlert("Dark mode has been enabled","success")
     }
@@ -39,7 +47,7 @@ function App() {
     <Alert alert={alert}/>
     <div className="container my-3">
     <TextForm displayAlert={displayAlert} heading="Enter your text to analyze" mode={mode}/>
-    {/* <About/> */}
+    
     </div>
     </>
   );
