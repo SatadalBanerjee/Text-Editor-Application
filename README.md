@@ -8,4 +8,4 @@
 * Hear out the text written
 * Removal of extra spaces
 * Clear and Copy text
-* 
+* Dark Mode/Light Mode
